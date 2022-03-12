@@ -2,28 +2,24 @@ package project.service;
 import project.model.*;
 import project.repository.Item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
-public class BouquetService implements Item {
+public class BouquetService {
 
-    @Override
-    public void addToCart(Bouquet bouquet) {
-
-    }
-
-    @Override
-    public void removeFromCart(Bouquet bouquet) {
-
-    }
-
-    public Double totalPrice(List<Flower> flowerList) {
+    public Double flowersPrice(List<Flower> flowerList) {
             Double bouquetPrice = 0.0;
             for (Flower flower : flowerList) {
                 bouquetPrice = bouquetPrice + flower.getPrice();
             }
             return bouquetPrice;
         }
+
+
+    public Double totalPrice (Double bouquetPrice, Double packagePrice) {
+        return bouquetPrice + packagePrice;
+    }
 }
 
 
