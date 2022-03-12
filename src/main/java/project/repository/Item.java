@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface Item {
 
-   void addToCart();
-   void removeFromCart();
-  // Double totalPrice(List<Flower> flowerList);
+   void addToCart(Bouquet bouquet);
+   void removeFromCart(Bouquet bouquet);
+   Double totalPrice(List<Flower> flowerList);
 
 }

@@ -38,5 +38,6 @@ public class OnlineStoreMain {
         double bouquetPrice = bouquetService.totalPrice(flowerList);
         System.out.println("The total cost is: ");
         System.out.println(basketService.totalPrice(packagePrice, bouquetPrice) + " RON");
+
     }
 }
