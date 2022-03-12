@@ -5,7 +5,7 @@ import java.util.List;
 public class Bouquet {
 
     private List<Flower> flowers;
-    private Package aPackage;
+    private Pack aPack;
     private Double price;
 
     public Bouquet() {
@@ -19,16 +19,16 @@ public class Bouquet {
         this.flowers = flowers;
     }
 
-    public Package getaPackage() {
-        return aPackage;
+    public Pack getaPackage() {
+        return aPack;
     }
 
-    public void setaPackage(Package aPackage) {
-        this.aPackage = aPackage;
+    public void setaPackage(Pack aPack) {
+        this.aPack = aPack;
     }
 
     public Double getPrice() {
-         return price;
+        return price;
     }
 
     public void setPrice(Double price) {
@@ -39,7 +39,7 @@ public class Bouquet {
     public String toString() {
         return "Bouquet{" +
                 "flowers=" + flowers +
-                ", aPackage=" + aPackage +
+                ", aPackage=" + aPack +
                 '}';
     }
 

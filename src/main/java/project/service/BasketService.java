@@ -14,21 +14,32 @@ public class BasketService implements Item {
         bouquet.setFlowers(bouquet.getFlowers());
         bouquet.setaPackage(bouquet.getaPackage());
         bouquet.setPrice(bouquet.getPrice());
-
-        bouquetList.add(bouquet);
+        if(!bouquetList.contains(bouquet)){
+            bouquetList.add(bouquet);
+        }
         return bouquetList;
-
     }
 
-    public List<Bouquet> removeFromCart(Bouquet bouquet) {
-        List<Bouquet> bouquetList = new ArrayList<>();
+
+    public List<Bouquet> removeFromBasket(Bouquet bouquet){
+       List<Bouquet> bouquetList = new ArrayList<>();
         bouquet.getFlowers();
         bouquet.getaPackage();
         bouquet.getPrice();
-
-        bouquetList.remove(bouquet);
+       if(bouquetList.contains(bouquet)){
+           bouquetList.remove(bouquet);
+       }
         return bouquetList;
     }
+
+    public List<Bouquet> getBasketItems(List<Bouquet> bouquetList){
+        for (Bouquet bouquet: bouquetList
+             ) {
+            System.out.println(" ");
+        }
+        return bouquetList;
+    }
+
 
 //    public Double totalPrice(Double packagePrice, Double bouquetPrice) {
 //

@@ -1,7 +1,7 @@
 package project;
 
 import project.model.*;
-import project.model.Package;
+import project.model.Pack;
 import project.service.BasketService;
 import project.service.BouquetService;
 import project.service.FlowerService;
@@ -20,7 +20,7 @@ public class OnlineStoreMain {
         BasketService basketService = new BasketService();
         Bouquet bouquet = new Bouquet();
         Flower flower = new Flower();
-        Package pack = new Package();
+        Pack pack = new Pack();
         Basket basket = new Basket();
 
         List<Flower> flowerList = new ArrayList<>();
@@ -70,17 +70,21 @@ public class OnlineStoreMain {
         double packagePrice2 = packageService.getPackagePrice(bouquet2.getaPackage());
         double bouquetPrice2 = bouquetService.flowersPrice(flowerList2);
         System.out.println(bouquetService.totalPrice(bouquetPrice2, packagePrice2));
+        System.out.println("-------------------------");
 
+        List<Bouquet> bouquetList = new ArrayList<>();
+        bouquetList.add(bouquet);
+        bouquetList.add(bouquet2);
 
-//        List<Bouquet> bouquetList = new ArrayList<>();
-//        bouquetList.add(bouquet);
-//        bouquetList.add(bouquet2);
-
+        //adding the items to basket
+        basketService.addToCart(bouquet);
+        basketService.addToCart(bouquet2);
+        //afisare lista de items din basket
+        System.out.println("Your basket contains the following items: ");
+        System.out.println(basketService.getBasketItems(bouquetList));
 
         System.out.println("Basket after remove the item: ");
-        basket.getBouquetList().remove(bouquet);
-        System.out.println(basket.getBouquetList());
-
+        basketService.removeFromBasket(bouquet2);
 
         //calculate the total cost
         System.out.println("The total cost is: ");

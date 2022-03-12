@@ -1,7 +1,7 @@
 package project.service;
 import project.model.*;
-import project.repository.Item;
 
+import java.lang.Package;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +20,15 @@ public class BouquetService {
     public Double totalPrice (Double bouquetPrice, Double packagePrice) {
         return bouquetPrice + packagePrice;
     }
+
+    public List<Bouquet> getBouquetList(){
+        List<Bouquet> bouquetList= new ArrayList<>();
+        for (Bouquet bouquet: bouquetList) {
+            System.out.println(bouquet.getFlowers() +" " + bouquet.getaPackage()+  " " + bouquet.getPrice());
+        }
+         return bouquetList;
+    }
 }
+
 
 

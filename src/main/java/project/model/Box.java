@@ -1,6 +1,6 @@
 package project.model;
 
-public class Box extends Package{
+public class Box extends Pack {
 
     public Box() {
     }

@@ -7,7 +7,7 @@ import java.util.List;
 public interface Item {
 
    List<Bouquet> addToCart(Bouquet bouquet);
-   List<Bouquet> removeFromCart(Bouquet bouquet);
+   List<Bouquet> removeFromBasket(Bouquet bouquet);
    Double basketPrice(List<Bouquet> bouquetList);
 
 }

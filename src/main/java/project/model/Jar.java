@@ -1,6 +1,6 @@
 package project.model;
 
-public class Jar extends Package {
+public class Jar extends Pack {
 
     public Jar() {
     }

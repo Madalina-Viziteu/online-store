@@ -1,14 +1,14 @@
 package project.model;
 
-public class Package {
+public class Pack {
 
     private Colour colour;
     private Double price;
 
-    public Package() {
+    public Pack() {
     }
 
-    public Package(Colour colour, Double price) {
+    public Pack(Colour colour, Double price) {
         this.colour = colour;
         this.price = price;
     }
